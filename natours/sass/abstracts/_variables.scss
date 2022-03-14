@@ -31,3 +31,10 @@ $default-font-size: 1.6em;
 $grid-width: 114rem;
 $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
+
+//TRANSITION
+$transition-all-quickest: all .2s;
+$transition-all-quick: all .3s;
+$transition-all-normal: all .4s;
+$transition-all-slow: all .5s;
+$transition-all-slowest: all .8s;
