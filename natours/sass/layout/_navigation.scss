@@ -14,6 +14,8 @@
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem $color-black-lighter;
+    text-align: center;
+    cursor: pointer;
   }
 
   &__background {
@@ -37,7 +39,6 @@
     opacity: 0;
     width: 0;
     transition: $transition-all-slowest cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
   }
 
   &__list {
@@ -49,7 +50,6 @@
 
   &__item {
     margin: 1rem;
-
   }
 
   &__link {
@@ -103,11 +103,37 @@
       content: "";
       position: absolute;
       left: 0;
-      transition: all .2s;
+      transition: $transition-all-quickest;
     }
 
-    &::before { top: -.8rem; }
-    &::after { top: .8rem; }
+    &::before {
+      top: -.8rem;
+    }
+
+    &::after {
+      top: .8rem;
+    }
   }
 
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }
