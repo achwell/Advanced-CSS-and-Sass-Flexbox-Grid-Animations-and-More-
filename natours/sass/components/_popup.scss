@@ -10,8 +10,7 @@
   visibility: hidden;
   transition: $transition-all-quick;
 
-  @supports (-webkit-backdrop-filter: blur(1rem)) or (backdrop-filter: blur(1rem)) {
-    -webkit-backdrop-filter: blur(1rem);
+  @supports (backdrop-filter: blur(1rem)) {
     backdrop-filter: blur(1rem);
     background-color: $color-black-dark;
   }
@@ -51,17 +50,10 @@
     font-size: 1.4rem;
     margin-bottom: 4rem;
 
-    -moz-column-count: 2;
-    -moz-column-gap: 4rem; //1em = 14px;
-    -moz-column-rule: 1px solid $color-grey-light-2;
-
     column-count: 2;
     column-gap: 4rem; //1em = 14px;
     column-rule: 1px solid $color-grey-light-2;
 
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
     hyphens: auto;
   }
 
