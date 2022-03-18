@@ -248,3 +248,7 @@ dist
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,node,yarn
+/natours/css/style.css
+/natours/css/style.comp.css
+/natours/css/style.concat.css
+/natours/css/style.prefix.css
